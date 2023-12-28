@@ -1,0 +1,224 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "main"
+    "ikincialan"
+    "teklifler"
+    "footer"
+    ;
+    grid-template-rows: 100px 750px 300px 350px;
+    gap: 5px;
+
+}
+@media only screen and (max-width: 600px) {
+    header,main,.ikincialan,.teklifler,footer {
+      min-height: 400px 500px 300px 300px 400px;
+    }
+  }
+header{
+    font-family: 'DM Sans', sans-serif;
+    display: flex;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+header > img{
+    flex: 0 0 1%;
+    height: 50px;
+}
+header > span{
+    display: flex;
+    flex: 0 1 80%;
+    flex-wrap: wrap;
+}
+header > span > a{
+    flex: 0 0 17%;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+header > span > a:hover{
+    color: rgb(255, 0, 0);
+}
+form{
+    display: flex;
+    gap: 5px;
+}
+header > form > input[type=text]{
+    height: 40px;
+    border-radius: 10px;
+    text-align: center;
+    border: 0px solid white;
+    background-color: rgb(201, 187, 187);
+}
+form > input[type=text]:hover{
+    background-color: white;
+}
+form > input[type=button]{
+    flex: 0 0 35%;
+    border-radius: 10px;
+    border: 0px solid rgb(252, 252, 252);
+    background-color: rgb(201, 187, 187);
+    color: rgb(129, 124, 124);
+}
+form > input[type=button]:hover{
+    background-color: rgb(255, 255, 255);
+}
+main{
+  background: url(../images/yedek.jpg) no-repeat center/cover;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 10px;
+  color: white;
+  padding: 40px;
+}
+main > h3{
+    flex: 0 0 25%;
+    display: flex;
+    align-items: end;
+}
+main > h1{
+    font-size: 60px;
+    font-family: 'DM Sans', sans-serif;
+}
+main > form > input[type=button]{
+    flex: 0 1 20%;
+    min-height: 60px;
+    background-color: rgb(0, 166, 255);
+    color: white;
+}
+main > form > input[type=button]:hover{
+    background-color: rgb(245, 245, 245);
+    color: rgb(0, 0, 0);
+    height: 65px;
+}
+.ikincialan{
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: center;
+   gap: 150px;
+   padding: 15px;
+   background-color: rgb(0, 0, 0);
+   grid-area: ikincialan;
+}
+.ikincialan > span{
+    flex: 0 1 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    
+}
+.ikincialan > span > a{
+    flex: 1 1 15%;
+    min-height: 40px;
+    display: flex;
+    font-weight: bolder;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-decoration: none;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    border-radius: 10px;
+}
+.ikincialan > span > a:hover{
+    opacity: 0.8;
+}
+.ikincialan > span > h1{
+    color: white;
+}
+.teklifler{
+    grid-area: teklifler;
+    background: url(../images/arka2yedek.jpg) no-repeat center/cover;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px;
+}
+.teklif{
+    flex: 0 0 60%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.teklifler > .teklif > h1{
+    flex:  0 0 60%;
+    height: 120px;
+    font-size: 50px; 
+    color: white;
+}
+.teklifler > .teklif > a{
+    flex: 0 0 45%;
+    background-color: rgb(177, 226, 226);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: black;
+}
+.teklifler > .teklif > a:hover{
+    background-color: rgb(177, 226, 226,0.5);
+}
+footer{
+    grid-area: footer;
+    display: flex;
+    background-color: black;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+footer > span{
+    color: white;
+    flex: 0 1 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px;
+}
+footer > span > h3{
+    color: gray;
+    font-size: 25px;
+}
+footer > span > a{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+}
+footer > span > a:hover{
+    color: red;
+}
+footer > div{
+    flex: 0 1 88%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 25px;
+    padding: 15px;
+}
+footer > div > i{
+    color: white;
+    font-size: 25px;
+}
+footer > div > i:nth-child(1):hover{
+    color: rgb(255, 0, 76);
+}
+footer > div > i:nth-child(2):hover{
+    color: rgb(0, 153, 255);
+}
+footer > div > i:nth-child(3):hover{
+    color: rgb(47, 38, 226);
+}
+
